@@ -4,6 +4,7 @@ export default function Header(){
         <nav>
             <Link to='/'>Home</Link>
             <Link to='/admin-panel'>admin</Link>
+            <Link to ='/orders'>Orders</Link>
         </nav>
     )
 }

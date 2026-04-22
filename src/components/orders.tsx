@@ -13,7 +13,9 @@ interface OrdersProps {
 export function Orders() {
     const [orders, setOrders] = useState<OrdersProps[]>([]);
     useEffect(() => {
-        fetch("http://localhost:8080/api/admin/manage-appointments")
+        fetch("http://localhost:8080/api/admin/manage-appointments", {
+            credentials: 'include',
+        })
             .then((response) => response.json())
             .then((data) =>
                 setOrders(data)
